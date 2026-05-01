@@ -1,0 +1,98 @@
+# Compiled object files and libraries
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.lib
+*.def
+*.exp
+
+# Executables
+*.exe
+*.out
+*.app
+*.elf
+
+# CUDA compiled files
+*.cubin
+*.fatbin
+*.ptx
+*.gpuasm
+
+# Build directories
+build/
+dist/
+bin/
+.build/
+cmake-build-*/
+CMakeFiles/
+CMakeLists.txt.user
+
+# CMake
+CMakeCache.txt
+CMakeUserPresets.json
+cmake_install.cmake
+install_manifest.txt
+*.cmake
+Makefile
+
+# IDE and Editor files
+.vscode/
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.user
+*.depend
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# System files
+Thumbs.db
+.gitkeep
+
+# Local testing/debugging
+*.log
+*.tmp
+/tmp/
+/temp/
+
+# Node modules (if applicable)
+node_modules/
+package-lock.json
+
+# Temporary files
+*.bak
+*.backup
+*.orig
+
+cuda_samples/
