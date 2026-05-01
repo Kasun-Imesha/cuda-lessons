@@ -3,7 +3,7 @@
 #include <time.h>
 #include <cuda_runtime.h>
 
-#define N 1000000 // vector size = 10 million
+#define N 10000000 // vector size = 10 million
 #define BLOCK_SIZE 256
 
 
@@ -74,7 +74,8 @@ int main() {
     for (int i=0; i < 3; i++){
         vector_add_cpu(h_a, h_b, h_c_cpu, N);
         vector_add_gpu <<<num_blocks, BLOCK_SIZE >>> (d_a, d_b, d_c, N);
-        cudaDeviceSynchronize();
+        cudaDeviceSynchronize(); // synchronization barrier between the CPU (host) and GPU (device)
+        // blocks the CPU until all previously launched CUDA work on the GPU is finished
     }
 
     // benchmark CPU implementation

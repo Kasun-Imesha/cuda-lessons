@@ -40,5 +40,6 @@ int main(int argc, char **argv){
     dim3 threadsPerBlock(t_x, t_y, t_z); // 3d cube of shape 4*4*4 = 64
 
     whoami<<<blocksPerGrid, threadsPerBlock>>>();
-    cudaDeviceSynchronize();
+    cudaDeviceSynchronize(); // synchronization barrier between the CPU (host) and GPU (device)
+    // blocks the CPU until all previously launched CUDA work on the GPU is finished
 }
